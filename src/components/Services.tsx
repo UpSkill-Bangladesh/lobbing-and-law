@@ -62,17 +62,17 @@ const Services = () => {
               key={index}
               className="p-8 bg-card border-border hover:border-gold transition-all duration-300 group hover:shadow-xl"
             >
-              <div className="mb-6">
+              <div className="mb-6 flex justify-center">
                 <div className="w-16 h-16 bg-gold/10 rounded-lg flex items-center justify-center group-hover:bg-gold/20 transition-colors duration-300">
                   <service.icon className="w-8 h-8 text-gold" />
                 </div>
               </div>
 
-              <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
+              <h3 className="text-2xl font-serif font-bold text-foreground mb-4 text-center">
                 {service.title}
               </h3>
 
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground leading-relaxed mb-6 text-center">
                 {service.description}
               </p>
 
