@@ -55,7 +55,7 @@ const Contact = () => {
             Contact Us
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-primary-foreground mb-6">
-            Let's Hear What Our Customer Says
+            Get in touch
           </h2>
           <p className="text-xl text-primary-foreground/70">
             Get in touch with us for a consultation or inquiry

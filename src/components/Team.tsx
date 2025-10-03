@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Scale, Users, Briefcase } from "lucide-react";
+import chairmanImage from "@/assets/chairman.png";
 
 const Team = () => {
   const leadership = [
@@ -58,11 +58,11 @@ const Team = () => {
                 key={index}
                 className="flex flex-col md:flex-row items-center md:items-start gap-8"
               >
-                <Avatar className="w-32 h-32 border-4 border-gold">
-                  <AvatarFallback className="text-3xl font-serif bg-gold text-accent-foreground">
-                    {leader.initials}
-                  </AvatarFallback>
-                </Avatar>
+                <img 
+                  src={chairmanImage} 
+                  alt={leader.name}
+                  className="w-32 h-32 border-4 border-gold rounded-full object-cover"
+                />
 
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-3xl font-serif font-bold text-foreground mb-1">
