@@ -36,8 +36,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "zeropluslegal@gmail.com",
-      href: "mailto:zeropluslegal@gmail.com",
+      content: "contact@lobbyingandlaw.com",
+      href: "mailto:contact@lobbyingandlaw.com",
     },
     {
       icon: MapPin,

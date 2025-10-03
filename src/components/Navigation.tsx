@@ -71,7 +71,7 @@ const Navigation = () => {
               size="lg"
               onClick={() => scrollToSection("contact")}
             >
-              Book Consultation
+              Get Started
             </Button>
           </div>
 
@@ -106,7 +106,7 @@ const Navigation = () => {
                 className="w-full"
                 onClick={() => scrollToSection("contact")}
               >
-                Book Consultation
+                Get Started
               </Button>
             </div>
           </div>
