@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Scale, Briefcase, Cpu } from "lucide-react";
-import logo from "@/assets/logo.png";
 
 const Services = () => {
   const services = [
@@ -52,9 +51,6 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-serif text-primary-foreground mb-6">
             Core Expertise & Services
           </h2>
-          <div className="flex justify-center my-8">
-            <img src={logo} alt="Lobbying and the Law Company Limited" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
-          </div>
           <p className="text-xl text-primary-foreground/70">
             Three pillars of excellence driving our comprehensive legal solutions
           </p>
