@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Scale } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +44,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
-            <Scale className="w-8 h-8 text-gold" />
+            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 md:w-14 md:h-14 object-contain" />
             <div>
               <h1 className="text-lg md:text-xl font-serif text-primary-foreground leading-tight">
                 Lobbying and the Law Company Limited
