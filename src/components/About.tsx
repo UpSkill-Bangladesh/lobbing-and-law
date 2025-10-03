@@ -42,7 +42,7 @@ const About = () => {
 
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                <strong className="text-foreground">Zero Plus Legal</strong> is
+                <strong className="text-foreground">Lobbying and the Law Company Limited</strong> is
                 Bangladesh's first and foremost lobbying and law firm,
                 pioneering a new era of strategic advocacy and comprehensive
                 legal solutions.

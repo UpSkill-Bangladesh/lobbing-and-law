@@ -34,8 +34,8 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-4">
               <Scale className="w-8 h-8 text-gold" />
               <div>
-                <h3 className="text-2xl font-serif text-primary-foreground font-bold">
-                  Zero Plus Legal
+                <h3 className="text-xl font-serif text-primary-foreground font-bold leading-tight">
+                  Lobbying and the Law Company Limited
                 </h3>
                 <p className="text-sm text-gold">
                   Bangladesh's First Lobbying & Law Firm
@@ -103,7 +103,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-gold/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/60 text-sm">
-              © {new Date().getFullYear()} Zero Plus Legal. All rights reserved.
+              © {new Date().getFullYear()} Lobbying and the Law Company Limited. All rights reserved.
             </p>
             <p className="text-primary-foreground/60 text-sm">
               Designed with excellence for legal innovation

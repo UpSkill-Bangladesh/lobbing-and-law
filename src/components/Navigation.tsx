@@ -45,8 +45,8 @@ const Navigation = () => {
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
             <Scale className="w-8 h-8 text-gold" />
             <div>
-              <h1 className="text-xl md:text-2xl font-serif text-primary-foreground">
-                Zero Plus Legal
+              <h1 className="text-lg md:text-xl font-serif text-primary-foreground leading-tight">
+                Lobbying and the Law Company Limited
               </h1>
               <p className="text-xs text-gold-light hidden md:block">
                 Bangladesh's First Lobbying & Law Firm

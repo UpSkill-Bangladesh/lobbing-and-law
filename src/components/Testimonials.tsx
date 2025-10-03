@@ -8,7 +8,7 @@ const Testimonials = () => {
       name: "Ahmed Hassan",
       position: "CEO, Leading Corporation",
       content:
-        "Zero Plus Legal's strategic advocacy and litigation expertise helped us navigate complex regulatory challenges. Their team's professionalism is unmatched.",
+        "Lobbying and the Law Company Limited's strategic advocacy and litigation expertise helped us navigate complex regulatory challenges. Their team's professionalism is unmatched.",
       initials: "AH",
     },
     {
