@@ -74,7 +74,7 @@ const Clients = () => {
                   <img
                     src={client.logo}
                     alt={`${client.name} logo`}
-                    className="w-full h-20 object-contain mb-3 grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-20 object-contain mb-3 transition-all duration-300 group-hover:scale-110"
                   />
                   <p className="text-sm font-medium text-center text-muted-foreground group-hover:text-gold transition-colors duration-300">
                     {client.name}
