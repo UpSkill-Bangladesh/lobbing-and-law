@@ -1,15 +1,23 @@
 import { Card } from "@/components/ui/card";
+import bashundharaLogo from "@/assets/clients/bashundhara.png";
+import beximcoLogo from "@/assets/clients/beximco.png";
+import abdulMonemLogo from "@/assets/clients/abdul-monem.png";
+import jmiLogo from "@/assets/clients/jmi.png";
+import squareLogo from "@/assets/clients/square.png";
+import aciLogo from "@/assets/clients/aci.png";
+import rahimafroozLogo from "@/assets/clients/rahimafrooz.png";
+import meghnaLogo from "@/assets/clients/meghna.png";
 
 const Clients = () => {
   const clients = [
-    "Bashundhara Group",
-    "Beximco",
-    "Abdul Monem Limited",
-    "JMI Group",
-    "Square Group",
-    "ACI Limited",
-    "Rahimafrooz",
-    "Meghna Group",
+    { name: "Bashundhara Group", logo: bashundharaLogo },
+    { name: "Beximco", logo: beximcoLogo },
+    { name: "Abdul Monem Limited", logo: abdulMonemLogo },
+    { name: "JMI Group", logo: jmiLogo },
+    { name: "Square Group", logo: squareLogo },
+    { name: "ACI Limited", logo: aciLogo },
+    { name: "Rahimafrooz", logo: rahimafroozLogo },
+    { name: "Meghna Group", logo: meghnaLogo },
   ];
 
   const whyChooseUs = [
@@ -61,10 +69,15 @@ const Clients = () => {
               {clients.map((client, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center p-6 bg-background/50 rounded-lg hover:bg-gold/5 transition-colors duration-300 group"
+                  className="flex flex-col items-center justify-center p-6 bg-background/50 rounded-lg hover:bg-gold/5 transition-all duration-300 group hover:shadow-md"
                 >
-                  <p className="text-lg font-semibold text-center text-foreground group-hover:text-gold transition-colors duration-300">
-                    {client}
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    className="w-full h-20 object-contain mb-3 grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                  <p className="text-sm font-medium text-center text-muted-foreground group-hover:text-gold transition-colors duration-300">
+                    {client.name}
                   </p>
                 </div>
               ))}
