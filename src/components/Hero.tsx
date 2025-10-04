@@ -26,12 +26,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container-custom text-center px-6">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
-          <div className="inline-block mb-4">
-            <span className="px-4 py-2 bg-gold/20 border border-gold text-gold rounded-full text-sm font-medium">
-              Experienced Lawyer Team
-            </span>
-          </div>
-
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-primary-foreground leading-tight">
             Influence with{" "}
             <span className="text-gold gold-shimmer bg-clip-text">
@@ -58,7 +52,7 @@ const Hero = () => {
               className="text-lg px-8 py-6 h-auto"
               onClick={scrollToContact}
             >
-              Book a Consultation
+              Speak with Our Experts
               <ArrowRight className="ml-2" />
             </Button>
             <Button
