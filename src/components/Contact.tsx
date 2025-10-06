@@ -52,8 +52,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      content: "Dhaka, Bangladesh",
-      href: "#",
+      content: "🇧🇩 Nirala Nibash 39, West Tejturi Bazar, Farmgate, Dhaka--1215",
+      href: "https://www.google.com/maps/search/?api=1&query=Nirala+Nibash+39+West+Tejturi+Bazar+Farmgate+Dhaka+1215",
     },
   ];
 
