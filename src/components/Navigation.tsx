@@ -58,25 +58,25 @@ const Navigation = () => {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center py-4 gap-4 md:gap-8">
+        <div className="flex items-center py-3 sm:py-4 gap-2 sm:gap-4 md:gap-8">
           {/* Logo */}
           <div 
-            className="flex items-center gap-2 md:gap-3 cursor-pointer flex-shrink-0" 
+            className="flex items-center gap-2 md:gap-3 cursor-pointer flex-shrink-0 max-w-[70%] sm:max-w-none" 
             onClick={() => location.pathname !== "/" ? navigate("/") : scrollToSection("hero")}
           >
-            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain flex-shrink-0" />
-            <div className="flex flex-col">
-              <h1 className="text-sm md:text-lg lg:text-xl font-serif text-primary-foreground leading-tight whitespace-nowrap">
+            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 object-contain flex-shrink-0" />
+            <div className="flex flex-col min-w-0">
+              <h1 className="text-xs sm:text-sm md:text-lg lg:text-xl font-serif text-primary-foreground leading-tight truncate sm:whitespace-nowrap">
                 Lobbying and the Law Company Limited
               </h1>
-              <p className="text-xs text-gold hidden md:block whitespace-nowrap">
+              <p className="text-[10px] sm:text-xs text-gold hidden sm:block whitespace-nowrap">
                 Bangladesh&apos;s First Lobbying & Law Firm
               </p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 ml-auto">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8 ml-auto">
             {navLinks.map((link) => (
               <button
                 key={link.isSection ? link.id : link.path}
