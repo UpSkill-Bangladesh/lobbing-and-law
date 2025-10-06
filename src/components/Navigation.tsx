@@ -68,21 +68,21 @@ const Navigation = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between py-3 md:py-4 lg:py-5">
-          {/* Logo */}
-          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer max-w-[60%] sm:max-w-[70%] lg:max-w-none" onClick={() => scrollToSection("hero")}>
-            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain flex-shrink-0" />
+          {/* Left Section: Logo + Company Name */}
+          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer max-w-[60%] lg:max-w-[280px] xl:max-w-[320px]" onClick={() => scrollToSection("hero")}>
+            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-16 lg:h-16 xl:w-20 xl:h-20 object-contain flex-shrink-0" />
             <div className="min-w-0 text-left">
-              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-serif text-primary-foreground leading-tight whitespace-nowrap truncate">
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg font-serif text-primary-foreground leading-tight">
                 Lobbying and the Law Company Limited
               </h1>
-              <p className="text-[10px] sm:text-xs md:text-sm text-gold-light hidden sm:block text-left">
+              <p className="text-[10px] sm:text-xs lg:text-xs text-gold-light hidden sm:block text-left">
                 Bangladesh's First Lobbying & Law Firm
               </p>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">
+          {/* Center Section: Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center justify-center gap-3 xl:gap-5 2xl:gap-6 flex-1 mx-8">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -96,6 +96,10 @@ const Navigation = () => {
                 {link.name}
               </button>
             ))}
+          </nav>
+
+          {/* Right Section: Theme Toggle + Get Started Button */}
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4">
             <Button
               variant="ghost"
               size="icon"
