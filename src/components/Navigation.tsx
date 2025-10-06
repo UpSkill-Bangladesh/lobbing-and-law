@@ -148,29 +148,31 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden pb-6 animate-fade-in-up">
-            <div className="flex flex-col gap-4 items-stretch">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className={`text-base transition-colors duration-300 font-medium text-center py-2.5 px-4 rounded-lg ${
-                    activeSection === link.id
-                      ? "text-gold bg-gold/10"
-                      : "text-primary-foreground hover:text-gold hover:bg-gold/5"
-                  }`}
+          <div className="lg:hidden absolute left-0 right-0 top-full bg-[#1e439b] shadow-lg animate-fade-in-up z-50">
+            <div className="container-custom py-6">
+              <div className="flex flex-col gap-4 items-stretch">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className={`text-base transition-colors duration-300 font-medium text-center py-2.5 px-4 rounded-lg ${
+                      activeSection === link.id
+                        ? "text-gold bg-gold/10"
+                        : "text-primary-foreground hover:text-gold hover:bg-gold/5"
+                    }`}
+                  >
+                    {link.name}
+                  </button>
+                ))}
+                <Button
+                  variant="gold"
+                  className="w-full mt-4"
+                  size="lg"
+                  onClick={() => scrollToSection("contact")}
                 >
-                  {link.name}
-                </button>
-              ))}
-              <Button
-                variant="gold"
-                className="w-full mt-4"
-                size="lg"
-                onClick={() => scrollToSection("contact")}
-              >
-                Get Started
-              </Button>
+                  Get Started
+                </Button>
+              </div>
             </div>
           </div>
         )}
