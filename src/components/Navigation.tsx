@@ -82,7 +82,7 @@ const Navigation = () => {
           </div>
 
           {/* Center Section: Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center justify-center gap-3 xl:gap-5 2xl:gap-6 flex-1 mx-8">
+          <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 2xl:gap-8 flex-1 mx-4 xl:mx-8">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -148,13 +148,13 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden pb-4 sm:pb-6 animate-fade-in-up">
-            <div className="flex flex-col gap-3 sm:gap-4">
+          <div className="lg:hidden pb-6 animate-fade-in-up">
+            <div className="flex flex-col gap-4 items-stretch">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className={`text-sm sm:text-base transition-colors duration-300 font-medium text-left py-1 px-2 rounded ${
+                  className={`text-base transition-colors duration-300 font-medium text-center py-2.5 px-4 rounded-lg ${
                     activeSection === link.id
                       ? "text-gold bg-gold/10"
                       : "text-primary-foreground hover:text-gold hover:bg-gold/5"
@@ -165,7 +165,7 @@ const Navigation = () => {
               ))}
               <Button
                 variant="gold"
-                className="w-full mt-2"
+                className="w-full mt-4"
                 size="lg"
                 onClick={() => scrollToSection("contact")}
               >
