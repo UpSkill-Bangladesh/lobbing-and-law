@@ -82,7 +82,7 @@ const Navigation = () => {
           </div>
 
           {/* Center Section: Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center justify-center gap-3 xl:gap-5 flex-1 mx-6">
+          <nav className="hidden lg:flex items-center justify-center gap-2 xl:gap-5 flex-1 mx-3 xl:mx-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -99,7 +99,7 @@ const Navigation = () => {
           </nav>
 
           {/* Right Section: Theme Toggle + Get Started Button */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-4 flex-shrink-0">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-3 flex-shrink-0">
             <Button
               variant="ghost"
               size="icon"
@@ -114,7 +114,7 @@ const Navigation = () => {
               variant="gold"
               size="lg"
               onClick={() => scrollToSection("contact")}
-              className="whitespace-nowrap"
+              className="whitespace-nowrap lg:h-10 xl:h-11"
             >
               Get Started
             </Button>
