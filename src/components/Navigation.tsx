@@ -82,7 +82,7 @@ const Navigation = () => {
           </div>
 
           {/* Center Section: Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center justify-center gap-4 xl:gap-6 2xl:gap-8 flex-1 mx-4 xl:mx-8">
+          <nav className="hidden lg:flex items-center justify-center gap-3 xl:gap-5 flex-1 mx-6">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -99,12 +99,12 @@ const Navigation = () => {
           </nav>
 
           {/* Right Section: Theme Toggle + Get Started Button */}
-          <div className="hidden lg:flex items-center gap-3 xl:gap-4">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4 flex-shrink-0">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-primary-foreground hover:text-gold flex-shrink-0"
+              className="text-primary-foreground hover:text-gold"
             >
               <Sun className="h-4 w-4 xl:h-5 xl:w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-4 w-4 xl:h-5 xl:w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
