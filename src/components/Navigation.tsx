@@ -69,13 +69,13 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between py-3 md:py-4 lg:py-5">
           {/* Left Section: Logo + Company Name */}
-          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer max-w-[60%] lg:max-w-[280px] xl:max-w-[320px]" onClick={() => scrollToSection("hero")}>
+          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer flex-shrink-0" onClick={() => scrollToSection("hero")}>
             <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-16 lg:h-16 xl:w-20 xl:h-20 object-contain flex-shrink-0" />
-            <div className="min-w-0 text-left">
-              <h1 className="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg font-serif text-primary-foreground leading-tight whitespace-nowrap truncate">
+            <div className="text-left">
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg font-serif text-primary-foreground leading-tight whitespace-nowrap">
                 Lobbying and the Law Company Limited
               </h1>
-              <p className="text-[10px] sm:text-xs lg:text-xs text-gold-light hidden sm:block text-left">
+              <p className="text-[10px] sm:text-xs lg:text-xs text-gold-light hidden sm:block text-left whitespace-nowrap">
                 Bangladesh's First Lobbying & Law Firm
               </p>
             </div>
