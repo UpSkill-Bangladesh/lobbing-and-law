@@ -4,7 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, MapPin, Send, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
+import whatsappLogo from "@/assets/whatsapp.png";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -190,7 +191,7 @@ const Contact = () => {
                 className="w-full"
                 onClick={() => window.open("https://wa.me/8801763116763?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services", "_blank")}
               >
-                <MessageCircle className="mr-2" />
+                <img src={whatsappLogo} alt="WhatsApp" className="w-5 h-5 mr-2" />
                 Contact via WhatsApp
               </Button>
             </form>
