@@ -44,27 +44,27 @@ const Navigation = () => {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-3 md:py-4 lg:py-5">
           {/* Logo */}
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
-            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
-            <div>
-              <h1 className="text-lg md:text-xl font-serif text-primary-foreground leading-tight">
+          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer max-w-[60%] sm:max-w-[70%] lg:max-w-none" onClick={() => scrollToSection("hero")}>
+            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain flex-shrink-0" />
+            <div className="min-w-0">
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-serif text-primary-foreground leading-tight truncate sm:whitespace-normal">
                 Lobbying and the Law Company Limited
               </h1>
-              <p className="text-xs text-gold-light hidden md:block">
+              <p className="text-[10px] sm:text-xs md:text-sm text-gold-light hidden sm:block">
                 Bangladesh's First Lobbying & Law Firm
               </p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-primary-foreground hover:text-gold transition-colors duration-300 font-medium"
+                className="text-sm xl:text-base text-primary-foreground hover:text-gold transition-colors duration-300 font-medium whitespace-nowrap"
               >
                 {link.name}
               </button>
@@ -73,41 +73,43 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-primary-foreground hover:text-gold"
+              className="text-primary-foreground hover:text-gold flex-shrink-0"
             >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun className="h-4 w-4 xl:h-5 xl:w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-4 w-4 xl:h-5 xl:w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
             <Button
               variant="gold"
               size="lg"
               onClick={() => scrollToSection("contact")}
+              className="whitespace-nowrap"
             >
               Get Started
             </Button>
           </div>
 
           {/* Mobile Menu Button & Theme Toggle */}
-          <div className="lg:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-1 sm:gap-2 flex-shrink-0">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-primary-foreground hover:text-gold"
+              className="text-primary-foreground hover:text-gold h-8 w-8 sm:h-10 sm:w-10"
             >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun className="h-4 w-4 sm:h-5 sm:w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-4 w-4 sm:h-5 sm:w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
             <button
-              className="text-primary-foreground"
+              className="text-primary-foreground p-1 sm:p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
               )}
             </button>
           </div>
@@ -115,20 +117,21 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden pb-6 animate-fade-in-up">
-            <div className="flex flex-col gap-4">
+          <div className="lg:hidden pb-4 sm:pb-6 animate-fade-in-up">
+            <div className="flex flex-col gap-3 sm:gap-4">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-primary-foreground hover:text-gold transition-colors duration-300 font-medium text-left"
+                  className="text-sm sm:text-base text-primary-foreground hover:text-gold transition-colors duration-300 font-medium text-left py-1"
                 >
                   {link.name}
                 </button>
               ))}
               <Button
                 variant="gold"
-                className="w-full"
+                className="w-full mt-2"
+                size="lg"
                 onClick={() => scrollToSection("contact")}
               >
                 Get Started
