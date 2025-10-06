@@ -51,9 +51,21 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: "Address",
+      title: "Bangladesh Office",
       content: "🇧🇩 Nirala Nibash 39, West Tejturi Bazar, Farmgate, Dhaka--1215",
       href: "https://www.google.com/maps/search/?api=1&query=Nirala+Nibash+39+West+Tejturi+Bazar+Farmgate+Dhaka+1215",
+    },
+    {
+      icon: MapPin,
+      title: "UK Office",
+      content: "🇬🇧 27 South Rise Way, London SE 18 7PG",
+      href: "https://www.google.com/maps/search/?api=1&query=27+South+Rise+Way+London+SE+18+7PG",
+    },
+    {
+      icon: MapPin,
+      title: "USA Office",
+      content: "🇺🇸 82-11, 37th Ave, Heritage Tower Jackson Heights, NYC, USA",
+      href: "https://www.google.com/maps/search/?api=1&query=82-11+37th+Ave+Heritage+Tower+Jackson+Heights+NYC+USA",
     },
   ];
 
