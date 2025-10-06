@@ -148,14 +148,14 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute left-0 right-0 top-full bg-[#1e439b] shadow-lg animate-fade-in-up z-50">
+          <div className="lg:hidden absolute left-0 right-0 top-full bg-hero-bg/98 backdrop-blur-md shadow-2xl animate-fade-in-up z-[100]">
             <div className="container-custom py-6">
-              <div className="flex flex-col gap-4 items-stretch">
+              <div className="flex flex-col gap-4 items-center max-w-md mx-auto">
                 {navLinks.map((link) => (
                   <button
                     key={link.id}
                     onClick={() => scrollToSection(link.id)}
-                    className={`text-base transition-colors duration-300 font-medium text-center py-2.5 px-4 rounded-lg ${
+                    className={`text-base transition-colors duration-300 font-medium text-center py-3 px-6 rounded-lg w-full ${
                       activeSection === link.id
                         ? "text-gold bg-gold/10"
                         : "text-primary-foreground hover:text-gold hover:bg-gold/5"
@@ -166,7 +166,7 @@ const Navigation = () => {
                 ))}
                 <Button
                   variant="gold"
-                  className="w-full mt-4"
+                  className="w-full mt-2"
                   size="lg"
                   onClick={() => scrollToSection("contact")}
                 >
