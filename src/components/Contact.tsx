@@ -110,13 +110,6 @@ const Contact = () => {
                 </a>
               </Card>
             ))}
-
-            {/* Map Placeholder */}
-            <Card className="p-4 bg-card">
-              <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
-                <MapPin className="w-12 h-12 text-gold" />
-              </div>
-            </Card>
           </div>
 
           {/* Contact Form */}
