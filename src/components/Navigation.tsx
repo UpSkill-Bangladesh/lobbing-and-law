@@ -49,7 +49,7 @@ const Navigation = () => {
           <div className="flex items-center gap-2 sm:gap-3 cursor-pointer max-w-[60%] sm:max-w-[70%] lg:max-w-none" onClick={() => scrollToSection("hero")}>
             <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain flex-shrink-0" />
             <div className="min-w-0">
-              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-serif text-primary-foreground leading-tight truncate sm:whitespace-normal">
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-serif text-primary-foreground leading-tight whitespace-nowrap truncate">
                 Lobbying and the Law Company Limited
               </h1>
               <p className="text-[10px] sm:text-xs md:text-sm text-gold-light hidden sm:block">
