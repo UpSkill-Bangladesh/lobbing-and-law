@@ -25,6 +25,29 @@ const Navigation = () => {
     }
   };
 
+  const [activeSection, setActiveSection] = useState("hero");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navLinks.map(link => link.id);
+      const scrollPosition = window.scrollY + 100;
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const navLinks = [
     { name: "Home", id: "hero" },
     { name: "About Us", id: "about" },
@@ -64,7 +87,11 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm xl:text-base text-primary-foreground hover:text-gold transition-colors duration-300 font-medium whitespace-nowrap"
+                className={`relative text-sm xl:text-base transition-colors duration-300 font-medium whitespace-nowrap after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-0 after:left-0 after:bg-gold after:origin-bottom-left after:transition-transform after:duration-300 ${
+                  activeSection === link.id
+                    ? "text-gold after:scale-x-100"
+                    : "text-primary-foreground hover:text-gold after:scale-x-0 hover:after:scale-x-100"
+                }`}
               >
                 {link.name}
               </button>
@@ -123,7 +150,11 @@ const Navigation = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-sm sm:text-base text-primary-foreground hover:text-gold transition-colors duration-300 font-medium text-left py-1"
+                  className={`text-sm sm:text-base transition-colors duration-300 font-medium text-left py-1 px-2 rounded ${
+                    activeSection === link.id
+                      ? "text-gold bg-gold/10"
+                      : "text-primary-foreground hover:text-gold hover:bg-gold/5"
+                  }`}
                 >
                   {link.name}
                 </button>
