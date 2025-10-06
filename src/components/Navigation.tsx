@@ -25,13 +25,33 @@ const Navigation = () => {
     }
   };
 
+  const [activeSection, setActiveSection] = useState("hero");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["hero", "about", "services", "portfolio", "team", "contact"];
+      const currentSection = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const navLinks = [
     { name: "Home", id: "hero" },
-    { name: "About Us", id: "about" },
+    { name: "About", id: "about" },
     { name: "Services", id: "services" },
-    { name: "Departments", id: "departments" },
-    { name: "Success Stories", id: "success" },
-    { name: "Clients", id: "clients" },
+    { name: "Portfolio", id: "portfolio" },
+    { name: "Team", id: "team" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -64,7 +84,11 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm xl:text-base text-primary-foreground hover:text-gold transition-colors duration-300 font-medium whitespace-nowrap"
+                className={`text-sm xl:text-base transition-all duration-300 font-medium whitespace-nowrap relative ${
+                  activeSection === link.id
+                    ? "text-gold after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-gold"
+                    : "text-primary-foreground hover:text-gold"
+                }`}
               >
                 {link.name}
               </button>
@@ -123,7 +147,11 @@ const Navigation = () => {
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-sm sm:text-base text-primary-foreground hover:text-gold transition-colors duration-300 font-medium text-left py-1"
+                  className={`text-sm sm:text-base transition-colors duration-300 font-medium text-left py-2 px-2 rounded ${
+                    activeSection === link.id
+                      ? "text-gold bg-gold/10"
+                      : "text-primary-foreground hover:text-gold hover:bg-gold/5"
+                  }`}
                 >
                   {link.name}
                 </button>
