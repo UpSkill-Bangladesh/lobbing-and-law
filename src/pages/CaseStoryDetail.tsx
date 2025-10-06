@@ -287,7 +287,7 @@ const CaseStoryDetail = () => {
           </Breadcrumb>
 
           <div className="animate-fade-in">
-            <Badge className="bg-gold text-accent-foreground mb-4">
+            <Badge className="bg-secondary text-secondary-foreground mb-4">
               {caseStory.category}
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-foreground mb-6">
@@ -313,7 +313,7 @@ const CaseStoryDetail = () => {
           </Button>
 
           {/* Case Meta Information */}
-          <Card className="mb-8 border-2 border-gold/20 animate-fade-in">
+          <Card className="mb-8 border-2 border-secondary/20 animate-fade-in">
             <CardContent className="p-6">
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-start gap-3">
@@ -352,7 +352,7 @@ const CaseStoryDetail = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="text-3xl font-serif flex items-center gap-3">
-                  <Icon className="w-8 h-8 text-gold" />
+                  <Icon className="w-8 h-8 text-secondary-foreground" />
                   The Challenge
                 </CardTitle>
               </CardHeader>
@@ -374,10 +374,10 @@ const CaseStoryDetail = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-gold/30 bg-gradient-to-br from-gold/5 to-transparent">
+            <Card className="border-2 border-secondary/30 bg-gradient-to-br from-secondary/5 to-transparent">
               <CardHeader>
                 <CardTitle className="text-3xl font-serif flex items-center gap-3">
-                  <Award className="w-8 h-8 text-gold" />
+                  <Award className="w-8 h-8 text-secondary-foreground" />
                   The Outcome
                 </CardTitle>
               </CardHeader>
@@ -407,7 +407,7 @@ const CaseStoryDetail = () => {
             </Card>
 
             {/* CTA */}
-            <Card className="bg-gradient-to-r from-primary/10 to-gold/10 border-gold/30">
+            <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-secondary/30">
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
                   Need Expert Legal Representation?
@@ -417,7 +417,7 @@ const CaseStoryDetail = () => {
                 </p>
                 <Button
                   size="lg"
-                  className="bg-gold hover:bg-gold/90 text-accent-foreground"
+                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
                   onClick={() => navigate("/#contact")}
                 >
                   Schedule a Consultation

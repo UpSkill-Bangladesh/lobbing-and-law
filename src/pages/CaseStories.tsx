@@ -137,7 +137,7 @@ const CaseStories = () => {
       <section className="relative bg-gradient-to-r from-primary to-primary/80 py-24 mt-16">
         <div className="container-custom">
           <div className="max-w-4xl animate-fade-in">
-            <span className="px-4 py-2 bg-gold/20 text-gold text-sm font-semibold rounded-full inline-block mb-4">
+            <span className="px-4 py-2 bg-secondary/10 text-secondary-foreground text-sm font-semibold rounded-full inline-block mb-4">
               Case Stories
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-foreground mb-6">
@@ -171,19 +171,19 @@ const CaseStories = () => {
                 return (
                   <Card
                     key={story.id}
-                    className="group hover:shadow-xl transition-all duration-300 border-2 border-gold/30 hover:border-gold animate-fade-in"
+                    className="group hover:shadow-xl transition-all duration-300 border-2 border-secondary/30 hover:border-secondary animate-fade-in"
                   >
                     <CardHeader>
                       <div className="flex items-start justify-between mb-4">
-                        <div className="p-3 bg-gold/10 rounded-lg group-hover:bg-gold/20 transition-colors">
-                          <Icon className="w-6 h-6 text-gold" />
+                        <div className="p-3 bg-secondary/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
+                          <Icon className="w-6 h-6 text-secondary-foreground" />
                         </div>
-                        <Badge className="bg-gold text-accent-foreground">Featured</Badge>
+                        <Badge className="bg-secondary text-secondary-foreground">Featured</Badge>
                       </div>
                       <Badge variant="outline" className="w-fit mb-3 border-primary/30">
                         {story.category}
                       </Badge>
-                      <CardTitle className="text-2xl font-serif group-hover:text-gold transition-colors">
+                      <CardTitle className="text-2xl font-serif group-hover:text-secondary-foreground transition-colors">
                         {story.title}
                       </CardTitle>
                       <CardDescription className="text-base mt-2">
@@ -201,7 +201,7 @@ const CaseStories = () => {
                       </div>
                       <Button
                         asChild
-                        className="w-full bg-gold hover:bg-gold/90 text-accent-foreground group/button"
+                        className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground group/button"
                       >
                         <Link to={`/case-stories/${story.id}`}>
                           Read Full Story
@@ -235,18 +235,18 @@ const CaseStories = () => {
               return (
                 <Card
                   key={story.id}
-                  className="group hover:shadow-lg transition-all duration-300 hover:border-gold/50 animate-fade-in"
+                  className="group hover:shadow-lg transition-all duration-300 hover:border-secondary/50 animate-fade-in"
                 >
                   <CardHeader>
                     <div className="flex items-start gap-3 mb-3">
-                      <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-gold/10 transition-colors">
-                        <Icon className="w-5 h-5 text-primary group-hover:text-gold transition-colors" />
+                      <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-secondary/10 transition-colors">
+                        <Icon className="w-5 h-5 text-primary group-hover:text-secondary-foreground transition-colors" />
                       </div>
                       <Badge variant="outline" className="border-primary/30 text-xs">
                         {story.category}
                       </Badge>
                     </div>
-                    <CardTitle className="text-xl font-serif group-hover:text-gold transition-colors">
+                    <CardTitle className="text-xl font-serif group-hover:text-secondary-foreground transition-colors">
                       {story.title}
                     </CardTitle>
                     <CardDescription className="text-sm mt-2">
@@ -264,7 +264,7 @@ const CaseStories = () => {
                     <Button
                       asChild
                       variant="outline"
-                      className="w-full group/button border-primary/30 hover:border-gold hover:bg-gold/10"
+                      className="w-full group/button border-primary/30 hover:border-secondary hover:bg-secondary/10"
                     >
                       <Link to={`/case-stories/${story.id}`}>
                         Read More
