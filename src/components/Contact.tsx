@@ -93,40 +93,24 @@ const Contact = () => {
                 key={index}
                 className="p-6 bg-card border-l-4 border-l-gold hover:shadow-lg transition-all duration-300"
               >
-                {info.title === "Phone" ? (
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-gold/10 rounded-lg transition-colors duration-300">
-                      <info.icon className="w-6 h-6 text-gold" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-1">
-                        {info.title}
-                      </h3>
-                      <p className="text-muted-foreground">
-                        {info.content}
-                      </p>
-                    </div>
+                <a
+                  href={info.href}
+                  className="flex items-start gap-4 group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="p-3 bg-gold/10 rounded-lg group-hover:bg-gold/20 transition-colors duration-300">
+                    <info.icon className="w-6 h-6 text-gold" />
                   </div>
-                ) : (
-                  <a
-                    href={info.href}
-                    className="flex items-start gap-4 group"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className="p-3 bg-gold/10 rounded-lg group-hover:bg-gold/20 transition-colors duration-300">
-                      <info.icon className="w-6 h-6 text-gold" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground mb-1">
-                        {info.title}
-                      </h3>
-                      <p className="text-muted-foreground group-hover:text-gold transition-colors duration-300">
-                        {info.content}
-                      </p>
-                    </div>
-                  </a>
-                )}
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground mb-1">
+                      {info.title}
+                    </h3>
+                    <p className="text-muted-foreground group-hover:text-gold transition-colors duration-300">
+                      {info.content}
+                    </p>
+                  </div>
+                </a>
               </Card>
             ))}
 
