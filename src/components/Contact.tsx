@@ -96,6 +96,8 @@ const Contact = () => {
                 <a
                   href={info.href}
                   className="flex items-start gap-4 group"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <div className="p-3 bg-gold/10 rounded-lg group-hover:bg-gold/20 transition-colors duration-300">
                     <info.icon className="w-6 h-6 text-gold" />
@@ -112,12 +114,6 @@ const Contact = () => {
               </Card>
             ))}
 
-            {/* Map Placeholder */}
-            <Card className="p-4 bg-card">
-              <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
-                <MapPin className="w-12 h-12 text-gold" />
-              </div>
-            </Card>
           </div>
 
           {/* Contact Form */}
@@ -208,6 +204,63 @@ const Contact = () => {
               </Button>
             </form>
           </Card>
+        </div>
+        
+        {/* Google Maps Section */}
+        <div className="mt-16">
+          <h3 className="text-3xl font-serif text-primary-foreground mb-8 text-center">Our Locations</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Bangladesh Map */}
+            <Card className="p-4 bg-card">
+              <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                🇧🇩 Bangladesh
+              </h4>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.4948583576985!2d90.38431!3d23.752486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b3f1e8a8e7%3A0x5e8e1c9d5e4c8b1a!2sFarmgate%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1234567890"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              />
+            </Card>
+            
+            {/* UK Map */}
+            <Card className="p-4 bg-card">
+              <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                🇬🇧 United Kingdom
+              </h4>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5234567890123!2d0.0934567!3d51.4876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a8d8d8d8d8d8%3A0x5e8e1c9d5e4c8b1a!2sLondon%20SE18%207PG!5e0!3m2!1sen!2suk!4v1234567890"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              />
+            </Card>
+            
+            {/* USA Map */}
+            <Card className="p-4 bg-card">
+              <h4 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                🇺🇸 United States
+              </h4>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1234567890123!2d-73.8834567!3d40.7486543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25f1234567890%3A0x5e8e1c9d5e4c8b1a!2sJackson%20Heights%2C%20Queens%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              />
+            </Card>
+          </div>
         </div>
       </div>
     </section>
