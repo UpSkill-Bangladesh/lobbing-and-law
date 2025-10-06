@@ -58,7 +58,7 @@ const Navigation = () => {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between py-4 gap-4 md:gap-8">
+        <div className="flex items-center py-4 gap-4 md:gap-8">
           {/* Logo */}
           <div 
             className="flex items-center gap-2 md:gap-3 cursor-pointer flex-shrink-0" 
@@ -76,7 +76,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8 ml-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8 ml-auto">
             {navLinks.map((link) => (
               <button
                 key={link.isSection ? link.id : link.path}
@@ -107,7 +107,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button & Theme Toggle */}
-          <div className="lg:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-2 ml-auto">
             <Button
               variant="ghost"
               size="icon"
