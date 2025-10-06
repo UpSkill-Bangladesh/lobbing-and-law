@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +21,11 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      setIsMobileMenuOpen(false);
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -25,13 +33,20 @@ const Navigation = () => {
     }
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setIsMobileMenuOpen(false);
+    window.scrollTo(0, 0);
+  };
+
   const navLinks = [
-    { name: "Home", id: "hero" },
-    { name: "About Us", id: "about" },
-    { name: "Services", id: "services" },
-    { name: "Departments", id: "departments" },
-    { name: "Clients", id: "clients" },
-    { name: "Contact", id: "contact" },
+    { name: "Home", id: "hero", isSection: true },
+    { name: "About Us", id: "about", isSection: true },
+    { name: "Services", id: "services", isSection: true },
+    { name: "Departments", id: "departments", isSection: true },
+    { name: "Case Stories", path: "/case-stories", isSection: false },
+    { name: "Clients", id: "clients", isSection: true },
+    { name: "Contact", id: "contact", isSection: true },
   ];
 
   return (
@@ -45,7 +60,10 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
+          <div 
+            className="flex items-center gap-3 cursor-pointer" 
+            onClick={() => location.pathname !== "/" ? navigate("/") : scrollToSection("hero")}
+          >
             <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
             <div>
               <h1 className="text-lg md:text-xl font-serif text-primary-foreground leading-tight">
@@ -61,8 +79,8 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                key={link.isSection ? link.id : link.path}
+                onClick={() => link.isSection ? scrollToSection(link.id!) : handleNavigation(link.path!)}
                 className="text-primary-foreground hover:text-gold transition-colors duration-300 font-medium"
               >
                 {link.name}
@@ -118,8 +136,8 @@ const Navigation = () => {
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
+                  key={link.isSection ? link.id : link.path}
+                  onClick={() => link.isSection ? scrollToSection(link.id!) : handleNavigation(link.path!)}
                   className="text-primary-foreground hover:text-gold transition-colors duration-300 font-medium text-left"
                 >
                   {link.name}
