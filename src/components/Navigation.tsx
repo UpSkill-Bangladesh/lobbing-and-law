@@ -48,15 +48,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain flex-shrink-0" />
-            <div className="flex items-center gap-2">
-              <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-serif text-primary-foreground whitespace-nowrap">
-                Lobbying and the Law Company Limited
-              </h1>
-              <span className="hidden lg:inline-block text-gold-light">|</span>
-              <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gold-light hidden lg:block whitespace-nowrap">
-                Bangladesh's First Lobbying & Law Firm
-              </p>
-            </div>
+            <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-serif text-primary-foreground whitespace-nowrap">
+              Lobbying and the Law Company Limited
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
