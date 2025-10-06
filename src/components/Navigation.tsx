@@ -53,35 +53,35 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-hero-bg/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+          ? "bg-primary/95 backdrop-blur-md shadow-lg"
+          : "bg-primary/90 backdrop-blur-sm"
       }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div 
-            className="flex items-center gap-3 cursor-pointer" 
+            className="flex items-center gap-2 md:gap-3 cursor-pointer" 
             onClick={() => location.pathname !== "/" ? navigate("/") : scrollToSection("hero")}
           >
-            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
-            <div>
-              <h1 className="text-lg md:text-xl font-serif text-primary-foreground leading-tight">
+            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain flex-shrink-0" />
+            <div className="flex flex-col">
+              <h1 className="text-sm md:text-lg lg:text-xl font-serif text-primary-foreground leading-tight whitespace-nowrap">
                 Lobbying and the Law Company Limited
               </h1>
-              <p className="text-xs text-gold-light hidden md:block">
-                Bangladesh's First Lobbying & Law Firm
+              <p className="text-xs text-gold hidden md:block whitespace-nowrap">
+                Bangladesh&apos;s First Lobbying & Law Firm
               </p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navLinks.map((link) => (
               <button
                 key={link.isSection ? link.id : link.path}
                 onClick={() => link.isSection ? scrollToSection(link.id!) : handleNavigation(link.path!)}
-                className="text-primary-foreground hover:text-gold transition-colors duration-300 font-medium"
+                className="text-primary-foreground hover:text-gold transition-colors duration-300 font-medium text-sm xl:text-base whitespace-nowrap"
               >
                 {link.name}
               </button>
@@ -90,7 +90,7 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-primary-foreground hover:text-gold"
+              className="text-primary-foreground hover:text-gold hover:bg-primary-foreground/10"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
@@ -100,6 +100,7 @@ const Navigation = () => {
               variant="gold"
               size="lg"
               onClick={() => scrollToSection("contact")}
+              className="whitespace-nowrap"
             >
               Get Started
             </Button>
@@ -111,14 +112,14 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-primary-foreground hover:text-gold"
+              className="text-primary-foreground hover:text-gold hover:bg-primary-foreground/10"
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
             <button
-              className="text-primary-foreground"
+              className="text-primary-foreground hover:text-gold transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
@@ -132,20 +133,20 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden pb-6 animate-fade-in-up">
+          <div className="lg:hidden pb-6 animate-fade-in-up bg-primary/95 -mx-6 px-6 mt-4 pt-4 border-t border-primary-foreground/10">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <button
                   key={link.isSection ? link.id : link.path}
                   onClick={() => link.isSection ? scrollToSection(link.id!) : handleNavigation(link.path!)}
-                  className="text-primary-foreground hover:text-gold transition-colors duration-300 font-medium text-left"
+                  className="text-primary-foreground hover:text-gold transition-colors duration-300 font-medium text-left py-2"
                 >
                   {link.name}
                 </button>
               ))}
               <Button
                 variant="gold"
-                className="w-full"
+                className="w-full mt-2"
                 onClick={() => scrollToSection("contact")}
               >
                 Get Started
