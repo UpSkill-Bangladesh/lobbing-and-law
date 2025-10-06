@@ -44,12 +44,6 @@ const Contact = () => {
       href: "tel:+8801763116763",
     },
     {
-      icon: MessageCircle,
-      title: "WhatsApp",
-      content: "+880 1763 116763",
-      href: "https://wa.me/8801763116763?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services",
-    },
-    {
       icon: Mail,
       title: "Email",
       content: "contact@lobbyingandlaw.com",
@@ -183,6 +177,21 @@ const Contact = () => {
               <Button type="submit" variant="gold" size="lg" className="w-full">
                 Send Consultation
                 <Send className="ml-2" />
+              </Button>
+              
+              <div className="text-center">
+                <span className="text-sm text-muted-foreground">or</span>
+              </div>
+              
+              <Button
+                type="button"
+                variant="outline"
+                size="lg"
+                className="w-full"
+                onClick={() => window.open("https://wa.me/8801763116763?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services", "_blank")}
+              >
+                <MessageCircle className="mr-2" />
+                Contact via WhatsApp
               </Button>
             </form>
           </Card>
