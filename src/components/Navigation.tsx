@@ -46,13 +46,14 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between py-3 md:py-4 lg:py-5">
           {/* Logo */}
-          <div className="flex items-center gap-2 sm:gap-3 cursor-pointer max-w-[60%] sm:max-w-[70%] lg:max-w-none" onClick={() => scrollToSection("hero")}>
-            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain flex-shrink-0" />
-            <div className="min-w-0">
-              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-serif text-primary-foreground leading-tight truncate sm:whitespace-normal">
+          <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 cursor-pointer" onClick={() => scrollToSection("hero")}>
+            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain flex-shrink-0" />
+            <div className="flex items-center gap-2">
+              <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-serif text-primary-foreground whitespace-nowrap">
                 Lobbying and the Law Company Limited
               </h1>
-              <p className="text-[10px] sm:text-xs md:text-sm text-gold-light hidden sm:block">
+              <span className="hidden lg:inline-block text-gold-light">|</span>
+              <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-gold-light hidden lg:block whitespace-nowrap">
                 Bangladesh's First Lobbying & Law Firm
               </p>
             </div>
