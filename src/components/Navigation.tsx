@@ -58,10 +58,10 @@ const Navigation = () => {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-4 gap-4 md:gap-8">
           {/* Logo */}
           <div 
-            className="flex items-center gap-2 md:gap-3 cursor-pointer" 
+            className="flex items-center gap-2 md:gap-3 cursor-pointer flex-shrink-0" 
             onClick={() => location.pathname !== "/" ? navigate("/") : scrollToSection("hero")}
           >
             <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 md:w-16 md:h-16 object-contain flex-shrink-0" />
@@ -76,7 +76,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8 ml-8">
             {navLinks.map((link) => (
               <button
                 key={link.isSection ? link.id : link.path}
