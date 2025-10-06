@@ -51,21 +51,9 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: "Bangladesh Office",
+      title: "Address",
       content: "🇧🇩 Nirala Nibash 39, West Tejturi Bazar, Farmgate, Dhaka--1215",
       href: "https://www.google.com/maps/search/?api=1&query=Nirala+Nibash+39+West+Tejturi+Bazar+Farmgate+Dhaka+1215",
-    },
-    {
-      icon: MapPin,
-      title: "UK Office",
-      content: "🇬🇧 27 South Rise Way, London SE 18 7PG",
-      href: "https://www.google.com/maps/search/?api=1&query=27+South+Rise+Way+London+SE+18+7PG",
-    },
-    {
-      icon: MapPin,
-      title: "USA Office",
-      content: "🇺🇸 82-11, 37th Ave, Heritage Tower Jackson Heights, NYC, USA",
-      href: "https://www.google.com/maps/search/?api=1&query=82-11+37th+Ave+Heritage+Tower+Jackson+Heights+NYC+USA",
     },
   ];
 
@@ -110,6 +98,13 @@ const Contact = () => {
                 </a>
               </Card>
             ))}
+
+            {/* Map Placeholder */}
+            <Card className="p-4 bg-card">
+              <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
+                <MapPin className="w-12 h-12 text-gold" />
+              </div>
+            </Card>
           </div>
 
           {/* Contact Form */}
