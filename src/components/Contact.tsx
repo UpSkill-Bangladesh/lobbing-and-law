@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Send, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -42,6 +42,12 @@ const Contact = () => {
       title: "Phone",
       content: "+880 1763 116763",
       href: "tel:+8801763116763",
+    },
+    {
+      icon: MessageCircle,
+      title: "WhatsApp",
+      content: "+880 1763 116763",
+      href: "https://wa.me/8801763116763?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services",
     },
     {
       icon: Mail,
