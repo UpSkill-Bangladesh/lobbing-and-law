@@ -1,6 +1,8 @@
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Scale, ShoppingCart, Laptop, BookOpen, TrendingUp, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Scale, ShoppingCart, Laptop, BookOpen, TrendingUp, Users, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Departments = () => {
   const departments = [
@@ -145,6 +147,18 @@ const Departments = () => {
                           </div>
                         ))}
                       </div>
+                    </div>
+
+                    <div className="pt-4">
+                      <Button
+                        asChild
+                        className="bg-gold hover:bg-gold/90 text-accent-foreground group"
+                      >
+                        <Link to={`/departments/${dept.id}`}>
+                          Learn More
+                          <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </Button>
                     </div>
                   </div>
                 </div>
