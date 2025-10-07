@@ -9,10 +9,12 @@ import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import UnderConstructionPopup from "@/components/UnderConstructionPopup";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <UnderConstructionPopup />
       <Navigation />
       <Hero />
       <About />
