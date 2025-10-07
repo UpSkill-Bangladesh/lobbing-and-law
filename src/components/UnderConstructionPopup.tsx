@@ -1,51 +1,46 @@
 import { useState, useEffect } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { X, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Construction } from "lucide-react";
 
 const UnderConstructionPopup = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Show popup on first load
-    const hasSeenPopup = sessionStorage.getItem("hasSeenConstructionPopup");
-    if (!hasSeenPopup) {
-      setIsOpen(true);
+    const hasSeenBanner = sessionStorage.getItem("hasSeenConstructionBanner");
+    if (hasSeenBanner) {
+      setIsVisible(false);
     }
   }, []);
 
   const handleClose = () => {
-    setIsOpen(false);
-    sessionStorage.setItem("hasSeenConstructionPopup", "true");
+    setIsVisible(false);
+    sessionStorage.setItem("hasSeenConstructionBanner", "true");
   };
 
+  if (!isVisible) return null;
+
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <div className="flex items-center justify-center mb-4">
-            <Construction className="h-16 w-16 text-gold animate-pulse" />
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gold/90 to-gold/80 backdrop-blur-sm border-b border-gold/30 shadow-lg">
+      <div className="container mx-auto px-4 py-3">
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3 flex-1">
+            <Info className="h-5 w-5 text-primary flex-shrink-0" />
+            <p className="text-sm md:text-base text-primary font-medium">
+              <span className="font-semibold">Welcome!</span> Our website is fully functional. We're continuously adding new features to serve you better.
+            </p>
           </div>
-          <DialogTitle className="text-center text-2xl">
-            Under Construction
-          </DialogTitle>
-          <DialogDescription className="text-center text-base mt-4">
-            Our website is currently being developed to serve you better. Some features may not be fully functional yet. Thank you for your patience!
-          </DialogDescription>
-        </DialogHeader>
-        <div className="flex justify-center mt-4">
-          <Button onClick={handleClose} variant="gold" size="lg">
-            I Understand
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={handleClose}
+            className="flex-shrink-0 h-8 w-8 p-0 hover:bg-primary/10"
+            aria-label="Close notification"
+          >
+            <X className="h-4 w-4 text-primary" />
           </Button>
         </div>
-      </DialogContent>
-    </Dialog>
+      </div>
+    </div>
   );
 };
 
