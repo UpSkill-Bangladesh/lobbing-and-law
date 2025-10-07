@@ -20,7 +20,7 @@ const UnderConstructionPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="w-full bg-gradient-to-r from-gold/90 to-gold/80 backdrop-blur-sm border-b border-gold/30 shadow-lg mt-[72px]">
+    <div className="w-full bg-gradient-to-r from-gold/90 to-gold/80 backdrop-blur-sm border-b border-gold/30 shadow-lg mt-[72px] md:mt-[96px] lg:mt-[96px] xl:mt-[120px]">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-3 flex-1">
