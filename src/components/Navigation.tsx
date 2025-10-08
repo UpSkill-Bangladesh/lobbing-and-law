@@ -70,9 +70,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-3 md:py-4 lg:py-5">
           {/* Left Section: Logo + Company Name */}
           <div className="flex items-center gap-2 sm:gap-3 cursor-pointer flex-shrink-0 max-w-[55%] md:max-w-[45%] lg:max-w-[35%] xl:max-w-[40%] overflow-hidden" onClick={() => scrollToSection("hero")}>
-            <div className="bg-white rounded-full p-1.5 sm:p-2 md:p-2.5 shadow-md flex-shrink-0">
-              <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-16 lg:h-16 xl:w-24 xl:h-24 object-contain" />
-            </div>
+            <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 xl:w-20 xl:h-20 object-contain flex-shrink-0" />
             <div className="min-w-0 text-left flex flex-col justify-center">
               <h1 className="text-sm sm:text-base md:text-lg lg:text-sm xl:text-lg font-serif text-primary-foreground leading-tight whitespace-nowrap truncate">
                 Lobbying and the Law Company Limited
