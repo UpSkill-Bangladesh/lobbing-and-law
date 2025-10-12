@@ -49,39 +49,19 @@ const UnderConstructionPopup = () => {
         /* Expanded chat bubble */
         <div className="fixed bottom-6 right-6 z-50 animate-slide-in-right">
           <div className="bg-gradient-to-br from-background to-background/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gold/20 max-w-sm w-80 overflow-hidden">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-gold to-gold/80 px-4 py-3 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                  <MessageCircle className="h-5 w-5 text-gold" />
-                </div>
-                <span className="font-semibold text-primary text-sm">Support Team</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={handleMinimize}
-                  className="h-7 w-7 p-0 hover:bg-primary/10"
-                  aria-label="Minimize"
-                >
-                  <span className="text-primary text-lg leading-none">−</span>
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={handleClose}
-                  className="h-7 w-7 p-0 hover:bg-primary/10"
-                  aria-label="Close"
-                >
-                  <X className="h-4 w-4 text-primary" />
-                </Button>
-              </div>
-            </div>
-
             {/* Message Content */}
-            <div className="p-5">
-              <div className="bg-gold/10 rounded-lg p-4 mb-3 border border-gold/20">
+            <div className="p-5 relative">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleClose}
+                className="absolute top-2 right-2 h-7 w-7 p-0 hover:bg-muted"
+                aria-label="Close"
+              >
+                <X className="h-4 w-4 text-muted-foreground" />
+              </Button>
+              
+              <div className="bg-gold/10 rounded-lg p-4 border border-gold/20">
                 <p className="text-sm text-foreground leading-relaxed">
                   <span className="font-semibold text-gold">Welcome! 👋</span>
                   <br />
@@ -90,9 +70,6 @@ const UnderConstructionPopup = () => {
                   </span>
                 </p>
               </div>
-              <p className="text-xs text-muted-foreground text-center">
-                Need help? Feel free to reach out to us!
-              </p>
             </div>
           </div>
         </div>
