@@ -74,8 +74,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between py-3 md:py-4 lg:py-5">
           {/* Left Section: Logo + Company Name */}
           <div className="flex items-center gap-1 sm:gap-1.5 cursor-pointer flex-shrink-0 max-w-[55%] md:max-w-[45%] lg:max-w-[35%] xl:max-w-[40%] overflow-hidden ml-1" onClick={() => scrollToSection("hero")}>
-            <div className="bg-gradient-to-br from-gold-light to-gold-dark p-1.5 rounded-full shadow-lg flex-shrink-0">
-              <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-9 lg:h-9 xl:w-12 xl:h-12 object-contain" />
+            <div className="relative flex-shrink-0">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a8a] via-gold to-[#1e3a8a] rounded-full blur-sm opacity-75"></div>
+              <div className="relative bg-gradient-to-br from-[#1e3a8a] to-gold p-0.5 rounded-full shadow-lg">
+                <div className="bg-background rounded-full p-1">
+                  <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-9 lg:h-9 xl:w-12 xl:h-12 object-contain rounded-full" />
+                </div>
+              </div>
             </div>
             <div className="min-w-0 text-left flex flex-col justify-center">
               <h1 className="text-sm sm:text-base md:text-lg lg:text-sm xl:text-lg font-serif text-primary-foreground leading-tight whitespace-nowrap truncate">
