@@ -72,23 +72,18 @@ const Navigation = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between py-3 md:py-4 lg:py-5">
-          {/* Left Section: Logo Only */}
-          <div className="cursor-pointer flex-shrink-0" onClick={() => scrollToSection("hero")}>
-            <div className="relative flex-shrink-0">
-              <div className="absolute inset-0 rounded-full" style={{
-                background: 'conic-gradient(from 0deg, #D4AF37, #1e3a8a, #D4AF37)',
-                padding: '2px'
-              }}>
-                <div className="w-full h-full rounded-full bg-background"></div>
-              </div>
-              <div className="relative rounded-full" style={{
-                background: 'conic-gradient(from 0deg, #D4AF37, #1e3a8a, #D4AF37)',
-                padding: '2px'
-              }}>
-                <div className="bg-white dark:bg-background rounded-full p-1">
-                  <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-12 lg:h-12 xl:w-16 xl:h-16 object-contain" />
-                </div>
-              </div>
+          {/* Left Section: Logo + Company Name */}
+          <div className="flex items-center gap-1 sm:gap-1.5 cursor-pointer flex-shrink-0 max-w-[55%] md:max-w-[45%] lg:max-w-[35%] xl:max-w-[40%] overflow-hidden ml-1" onClick={() => scrollToSection("hero")}>
+            <div className="bg-gradient-to-br from-gold-light to-gold-dark p-1.5 rounded-full shadow-lg flex-shrink-0">
+              <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-9 lg:h-9 xl:w-12 xl:h-12 object-contain" />
+            </div>
+            <div className="min-w-0 text-left flex flex-col justify-center">
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-sm xl:text-lg font-serif text-primary-foreground leading-tight whitespace-nowrap truncate">
+                Lobbying and the Law Company Limited
+              </h1>
+              <p className="text-[10px] sm:text-xs lg:text-[10px] xl:text-xs text-gold-light hidden sm:block text-left whitespace-nowrap truncate leading-tight">
+                Bangladesh's First Lobbying & Law Firm
+              </p>
             </div>
           </div>
 
