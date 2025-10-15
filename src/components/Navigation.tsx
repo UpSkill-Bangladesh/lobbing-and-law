@@ -75,10 +75,18 @@ const Navigation = () => {
           {/* Left Section: Logo + Company Name */}
           <div className="flex items-center gap-1 sm:gap-1.5 cursor-pointer flex-shrink-0 max-w-[55%] md:max-w-[45%] lg:max-w-[35%] xl:max-w-[40%] overflow-hidden ml-1" onClick={() => scrollToSection("hero")}>
             <div className="relative flex-shrink-0">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-light via-gold to-gold-dark rounded-full blur-sm opacity-75"></div>
-              <div className="relative bg-gradient-to-br from-gold-light to-gold-dark p-0.5 rounded-full shadow-lg">
-                <div className="bg-background rounded-full p-1">
-                  <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-9 lg:h-9 xl:w-12 xl:h-12 object-contain rounded-full" />
+              <div className="absolute inset-0 rounded-full" style={{
+                background: 'conic-gradient(from 0deg, #D4AF37, #1e3a8a, #D4AF37)',
+                padding: '2px'
+              }}>
+                <div className="w-full h-full rounded-full bg-background"></div>
+              </div>
+              <div className="relative rounded-full" style={{
+                background: 'conic-gradient(from 0deg, #D4AF37, #1e3a8a, #D4AF37)',
+                padding: '2px'
+              }}>
+                <div className="bg-white dark:bg-background rounded-full p-1">
+                  <img src={logo} alt="Lobbying and the Law Company Limited Logo" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-9 lg:h-9 xl:w-12 xl:h-12 object-contain" />
                 </div>
               </div>
             </div>
